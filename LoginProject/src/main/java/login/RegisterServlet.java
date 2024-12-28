@@ -61,6 +61,14 @@ public class RegisterServlet extends HttpServlet {
 		
 			e.printStackTrace();
 		}
+		finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				
+				e.printStackTrace();
+			}
+		}
 	}
 
 }
